@@ -31,17 +31,17 @@ header {
     height: 95vh;
     clip-path: ellipse(100% 53% at 49% 35%);
 }
-.text-box {
+.header__text-box {
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.logo {
+.header__logo {
       height: 70px;
 }
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -59,7 +59,7 @@ header {
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     cach phan bo thoi gian */
 }
-.heading-primary__main {
+.heading-primary--main {
     display: block;
     font-size: 6.2rem;
     font-weight: 400;
@@ -67,7 +67,7 @@ header {
 
     animation: moveinleft 1s ease-out;
 }
-.heading-primary__sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -91,7 +91,7 @@ header {
     position: relative;
     /* after pos */
 }
-.btn-white {
+.btn--white {
     color: #777777;
     background-color: #fff;
     padding: 15px;
@@ -101,7 +101,7 @@ header {
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
 
 }
-.bnt:active {
+.btn:active {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
@@ -119,6 +119,17 @@ header {
     z-index: -1;
     transition: all 0.5s;
 }
+
+.btn--white::after{
+    content: "";
+    background-color: #fff;
+}
+
+.btn--animated {
+    animation: moveinbottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
